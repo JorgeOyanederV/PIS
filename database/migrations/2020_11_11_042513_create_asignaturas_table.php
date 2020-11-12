@@ -14,8 +14,8 @@ class CreateAsignaturasTable extends Migration
     public function up()
     {
         Schema::create('asignaturas', function (Blueprint $table) {
-            $table->string('codigo')->primary();
-            $table->integer('NRC');
+            $table->string('codigo');
+            $table->integer('NRC')->primary();
             $table->string('nombre');
             $table->string('rut_profesor')->nullable();
             $table->timestamps();

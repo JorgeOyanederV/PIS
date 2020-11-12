@@ -18,10 +18,10 @@ class CreateSituacionesTable extends Migration
             $table->string('tipo');
             $table->date('fecha');
             $table->string('rut_estudiante');
-            $table->string('codigo_asignatura')->nullable();
+            $table->integer('NRC_asignatura')->nullable();
             $table->timestamps(); 
 
-            $table->foreign('codigo_asignatura')->references('codigo')->on('asignaturas');
+            $table->foreign('NRC_asignatura')->references('NRC')->on('asignaturas');
             $table->foreign('rut_estudiante')->references('rut')->on('estudiantes');
 
         });

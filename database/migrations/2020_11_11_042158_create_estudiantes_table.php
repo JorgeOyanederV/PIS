@@ -19,7 +19,7 @@ class CreateEstudiantesTable extends Migration
             $table->string('apellido_materno');
             $table->string('nombre');
             $table->string('correo_electronico')->nullable();
-            $table->integer('codigo_carrera')->nullable();
+            $table->integer('codigo_carrera');
             $table->timestamps();
         });
     }
