@@ -15,3 +15,5 @@ Route::view('/about','about')->name('about');
 Route::view('/portafolio','portafolio')->name('portafolio');
 Route::view('/contact','contact')->name('contact')->name('contact');
 
+Route::get('/cargar_asignaturas', 'RamosController@index')->name('ramos.index');
+Route::post('import-list-excel', 'RamosController@importExcel')->name('ramos.import.excel');
